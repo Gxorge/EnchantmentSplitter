@@ -1,0 +1,6 @@
+levelsNeeded: 30 # Levels need to split (overall or per enchantment, depending the bool below)
+perEnch: false # If enabled, the "levelsNeeded" value will be multiplied by the amount of enchantments
+haveBooks: true # If enabled, you must have books in your inventory to turn into enchanted books
+command: false # If enabled, players can use the /split instead of an anvil
+usePermission: false # If enabled, players must have the "enchsplitter.use" permission to use the splitting gui
+commandPermission: true # If enabled, players must have the "enchsplitter.command.split" permission to run /split

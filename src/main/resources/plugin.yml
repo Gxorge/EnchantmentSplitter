@@ -1,0 +1,17 @@
+name: EnchantmentSplitter
+main: moe.gabriella.enchsplitter.EnchantmentSplitter
+version: 1.0
+api-version: 1.16
+author: Gabriella
+commands:
+  split:
+    description: Access the splitting gui
+    usage: /<command>
+
+permissions:
+  enchsplit.use:
+    description: Allows use of the splitting gui
+    default: op
+  enchsplit.command.split:
+    description: Allows use of /split
+    default: op
