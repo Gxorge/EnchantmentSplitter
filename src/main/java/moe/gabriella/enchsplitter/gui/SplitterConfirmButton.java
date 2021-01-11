@@ -8,6 +8,7 @@ import org.bukkit.Sound;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.Damageable;
 import org.bukkit.inventory.meta.EnchantmentStorageMeta;
 import org.bukkit.inventory.meta.ItemMeta;
 
@@ -37,6 +38,10 @@ public class SplitterConfirmButton implements GUIButton {
 
         ItemStack newI = new ItemStack(item.getType());
         ItemMeta newIm = newI.getItemMeta();
+        if (newIm instanceof Damageable) {
+            Damageable typeM = (Damageable) item.getItemMeta();
+            ((Damageable) newIm).setDamage(typeM.getDamage());
+        }
         newIm.setDisplayName(item.getItemMeta().getDisplayName());
         newI.setItemMeta(newIm);
 
